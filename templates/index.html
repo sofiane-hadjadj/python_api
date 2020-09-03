@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Open Service Broker</title>
+        <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/material.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script type="text/javascript" src="{{ url_for('static', filename='js/material.min.js') }}"></script>
+    </head>
+    <body>
+		<!-- Always shows a header, even in smaller screens. -->
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		  <header class="mdl-layout__header">
+		    <div class="mdl-layout__header-row">
+		      <!-- Title -->
+		      <span class="mdl-layout-title">AOS OSB</span>
+		      <!-- Add spacer, to align navigation to the right -->
+		      <div class="mdl-layout-spacer"></div>
+		      <!-- Navigation. We hide it in small screens. -->
+		      <nav class="mdl-navigation mdl-layout--large-screen-only">
+		        <a class="mdl-navigation__link" href="">Link</a>
+		        <a class="mdl-navigation__link" href="">Link</a>
+		        <a class="mdl-navigation__link" href="">Link</a>
+		        <a class="mdl-navigation__link" href="">Link</a>
+		      </nav>
+		    </div>
+		  </header>
+		  <div class="mdl-layout__drawer">
+		    <span class="mdl-layout-title">Menu</span>
+		    <nav class="mdl-navigation">
+		      <a class="mdl-navigation__link" href="">Link</a>
+		      <a class="mdl-navigation__link" href="">Link</a>
+		      <a class="mdl-navigation__link" href="">Link</a>
+		      <a class="mdl-navigation__link" href="">Link</a>
+		    </nav>
+		  </div>
+		  <main class="mdl-layout__content">
+		    <div class="page-content">
+		        <h1>Open Service Broker</h1>
+		        <p>En utilisant ce service vous vous apprêtez à effectuer les actions suivantes :</p>
+		        <ul>
+		                <li>Création de la keytab</li>
+
+		                        <li>Création de la famille Paul</li>
+
+		                        <li>Création de l'utilisateur Linux</li>
+
+		                        <li>Création de l'utilisateur Hdfs</li>
+
+		                        <li>Création des droits Ranger</li>
+		                </ul>
+
+		                <p>Veuillez remplir les informations suivantes afin de procéder à leur execution :</p>
+
+		        <form method="POST" action="https://cfdlkapi.qvi.dev.airfrance.fr/dlkbroker">
+		                Nom d'utilisateur :
+		            <input type="text" name="user">
+		            <br><br>
+		                Site ( tls | qvi ) :
+		            <input type="text" name="site">
+		            <br><br>
+		                Environnement ( dev | rct | prd ) :
+		            <input type="text" name="env">
+		            <br><br>
+		            <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+		        </form>    	
+		    </div>
+		  </main>
+		</div>
+    </body>
+</html>
